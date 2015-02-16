@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    // display the detail of the first item
+    - var item = repo
+    h3= item.name
+    h5= item.description
+    div#example-grid
+        div.row
+            div.eight.columns= "Login: " + item.owner['login'] + " ID: " + item.owner['id']
+        div.row
+            div.eight.columns= "Private: " + item.private
+        div.row
+            div.eight.columns= "Size: " + item.size
+
+        

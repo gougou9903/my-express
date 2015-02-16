@@ -1,0 +1,20 @@
+extends layout.jade
+
+// TODO: use the better template from the hackathon
+block content
+    each item in repos
+        div.row
+            div.eight.columns
+                // TODO: fix the hardcoded link
+                a(href='/view/repo/' + item.id)
+                    = item.name
+        div.row
+            - var des = item.description
+            if des
+            else
+                - des = "NO DISCRIPTION"
+            div.eight.columns
+                = des
+            div.four.columns
+                = item.updated_at
+                    

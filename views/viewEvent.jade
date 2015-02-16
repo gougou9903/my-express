@@ -1,0 +1,15 @@
+extends layout
+
+// TODO: use the better template from the hackathon
+block content
+    // display the detail of the first item
+    - var item = events
+    h3= item.repo['name']
+    h4= item.type
+    div#example-grid
+        div.row
+            div.eight.columns= "Login: " + item.actor['login']
+        h5= "Original"
+        div.row
+            div.eight.columns= "Login: " + item.org['login']
+
